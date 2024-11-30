@@ -1,0 +1,238 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Navbar styles */
+.navbar {
+    background: transparent;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+.navbar a {
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    display: block;
+    border-radius: 15px;
+}
+
+.navbar a:hover {
+    background-color: #222638;
+    color: #fff;
+}
+
+/* .navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+} */
+
+.navbar .nav-links {
+    float: right;
+    display: flex;
+}
+
+.navbar .nav-links a {
+    margin-left: 10px;
+}
+
+.navbar .menu-icon {
+    display: none;
+    font-size: 1.8rem;
+    color: white;
+    cursor: pointer;
+}
+
+
+/* Main Container */
+.container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    background: url("4k-minimal-desktop-3840x2400-v0-2uqff192dsrd1.png.webp") no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Login/Signup Box */
+.auth-container {
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    background: transparent;
+    border: 1px solid;
+    backdrop-filter: blur(4px);
+    color: #fff;
+    border-radius: 15px;
+
+}
+
+h2 {
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.button-group button {
+    width: 120px;
+    padding: 10px 15px;
+    font-size: 15px;
+    font-weight: 800;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    background-color: #e0e0e0;
+    color: #333;
+    margin: 0 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.button-group button.active {
+    background-color: #222638;
+    color: white;
+}
+
+button:hover {
+    background-color: #222638;
+    color: white;
+}
+
+form {
+    display: none;
+    margin-top: 20px;
+}
+
+form.active {
+    display: block;
+}
+
+.input-field {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.input-field input {
+
+    width: 100%;
+    padding: 10px;
+    background: transparent;
+    border: 1px solid #fff;
+    border-radius: 12px;
+    outline: none;
+    color: #fff;
+}
+
+.input-field input::placeholder {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.input-field i {
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+.remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    margin: -5px 2px 15px;
+}
+
+.remember-forgot label input {
+    accent-color: #fff;
+    margin-right: 3px;
+}
+
+.remember-forgot a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+.submit-button {
+    width: 220px;
+    padding: 10px 20px;
+    margin-bottom: 15px;
+    background-color: white;
+    border: none;
+    border-radius: 50px;
+    color: #222327;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 800;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: rgba(250,190,178);
+}
+#google:hover{
+    background-color: rgba(212, 74, 62);
+}
+/* Media Queries */
+@media (max-width: 1000px){
+    .navbar .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar .menu-icon {
+        display: block;
+    }
+
+    .navbar .menu {
+        display: block;
+    }
+
+    .navbar .nav-links a {
+        padding: 12px;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.5);
+    }
+
+    .auth-container{
+        width: auto;
+        height: auto;
+       
+    }
+}
+@media (max-height:500px) {
+    .navbar .nav-links {
+        display: block;
+        position: absolute;
+        flex-direction: column-reverse;
+        width: 140px;
+    }
+}

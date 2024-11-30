@@ -1,0 +1,62 @@
+<%-include("./layout/boilerplate.ejs")%>
+
+    <!-- Navbar -->
+    <div class="navbar">
+
+        <span class="menu-icon" onclick="toggleMenu()">&#9776;</span>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#" id="auth-link">Login/Register</a>
+        </div>
+    </div>
+
+    <!-- Login/Signup Container -->
+    <div class="container">
+        <div class="auth-container">
+            <h2 id="form-title">Login</h2>
+            <div class="button-group">
+                <button id="login-btn" class="active">Login</button>
+                <button id="signup-btn">Register</button>
+            </div>
+
+            <!-- Login Form  -->
+            <form id="login-form" class="active" action="/login" method="POST" >
+                <div class="input-field">
+                    <input type="email" placeholder="Email" name="email" required>
+                    <i class='bx bxs-envelope'></i>
+                </div>
+                <div class="input-field">
+                    <input type="password" placeholder="Password"  name="password" required>
+                    <i class='bx bxs-lock'></i>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox">Remember Me</label>
+                    <a href="">Forgot Password?</a>
+                </div>
+                <button class="submit-button" type="submit">Login</button>
+                <div>
+                    <button class="submit-button" id="google" type="submit"><i class='bx bxl-google'></i></button>
+                </div>
+            </form>
+
+            <!-- Signup Form  -->
+            <form id="signup-form" action="/signup" method="POST" >
+                <div class="input-field">
+                    <input type="text" placeholder="Username"  name="username" required>
+                    <i class='bx bxs-user'></i>
+                </div>
+                <div class="input-field">
+                    <input type="email" placeholder="Email"  name="email" required>
+                    <i class='bx bxs-envelope'></i>
+                </div>
+                <div class="input-field">
+                    <input type="password" placeholder="Password"  name="password" required>
+                    <i class='bx bxs-lock'></i>
+                </div>
+                <button class="submit-button" type="submit">Register</button>
+            </form>
+        </div>
+    </div>
+<script  src="/js/login&signup.js"></script>
